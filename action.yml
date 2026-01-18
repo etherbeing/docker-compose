@@ -1,0 +1,11 @@
+name: docker compose
+description: Runs latest version of docker compose at ease
+inputs:
+  option:
+    description: For example start, up, down, etc...
+    required: true
+runs:
+  using: "composite"
+  steps:
+    run: docker compose ${{inputs.option}}
+    shell: bash
